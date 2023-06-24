@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="stil.css">
+    <title>Courses</title>
+
+    <style>
+        #tabela {
+            position: absolute;
+            margin-left: 860px;
+            color: white;
+            margin-top: -650px;
+        }
+
+
+        body{
+            background-color: #4e555b;
+        }
+        h1{
+            position: absolute;
+            margin-top: 50px;
+            margin-left: 660px;
+        }
+
+        #text1{
+            color: white;
+            width: 1000px;
+            margin-top: 110px;
+            margin-left: 250px;
+        }
+
+        tr{
+            border: 1px solid black;
+        }
+        td{
+            border: 1px solid black;
+        }
+        th{
+            border: 1px solid black;
+        }
+
+        iframe{
+            margin-top: 50px;
+            margin-left: 320px;
+            margin-bottom: 50px;
+        }
+
+
+        h6{
+            position: absolute;
+            margin-top: -690px;
+            margin-left: 860px;
+        }
+
+        .eden{
+            display: inline-block;
+            width: 450px;
+            padding: 10px;
+            border: 1px solid gray;
+            background-color: lightcyan;
+            color: dimgray;
+            margin: 10px;
+            margin-left: 50px;
+        }
+        .containerr{
+            margin-left: 250px;
+        }
+        .dva{
+            display: flex;
+            width: 450px;
+            padding: 10px;
+            border: 1px solid gray;
+            background-color: lightcyan;
+            color: dimgray;
+            margin: 10px;
+            margin-left: 50px;
+
+        }
+        .tri{
+            display: flex;
+            width: 450px;
+            padding: 10px;
+            border: 1px solid gray;
+            background-color: lightcyan;
+            color: dimgray;
+            margin: 10px;
+            margin-left: 50px;
+
+        }
+        #cetiri{
+            position: absolute;
+            margin-top: -445px;
+            margin-left: 500px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">CodeGenius</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="course.html">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<h1>Циклуси</h1>
+
+<div id="text1">
+    Многу често во компјутерското програмирање би сакале да повторуваме
+    одредени дејства. Понекогаш сакаме да ги повториме овие дејства одреден број
+    пати. Некогаш, сакаме да повториме некои дејства сè додека одреден услов (т.е.
+    Буловиот израз) е True. Понекогаш би сакале да повториме некои дејства за секој
+    елемент на податоци во некоја збирка на податочни елементи. Во Пајтон,
+    можеме да ги правиме сите овие работи користејќи јамки.
+<br>
+
+
+
+
+</div>
+
+<div class="containerr">
+<div class="eden">
+    1.  While – loops
+    <br>
+    While - јамките функционираат многу како if-argumentite со тоа што имаат многу
+    слична синтакса - услов проследен со блок - но блокот може да се изврши повеќе
+    пати додека условот е True.
+    While-јамките се состојат од зборот while, проследено со булов израз (услов на
+    јамка), проследено со две точки, проследени со блок од код. <br>
+    Со while-loops, можеме да ги повториме дејствата на барање некаков одговор и
+    проверка на валидноста на одговорот додека корисникот не внесе одговор кој е
+    валиден! <br>
+    While јамките може да се користат и за извршување на блок од код одреден
+    број пати. Овие се нарекуваат јамки за броење затоа што цела променлива се
+    користи за броење колку пати блокот е извршен, а условот на јамката е таков
+    што условот е True се додека циклусот има извршено помалку од потребниот
+    број пати <br>
+</div>
+<div class="eden">
+    2. For – Loops <br>
+    Во Python, for-јамките дозволуваат повторување на блок код за секој
+    податочен елемент во низа. . Во моментов знаеме за еден вид низа: string.
+    Значи, можеме да користиме for-јамка за да направиме нешто за секој знак
+    во низата. <br>
+    Генерално, синтаксата на for-јамката се состои од зборот for, проследено со име
+    на променлива, проследено со зборот in, проследено со низа, проследено со две
+    точки, проследено со блок: <br>
+    for променлива во секвенца: <br>
+    # Блок на код - секој пат кога овој блок се повторува променливата се
+    однесува на следниот елемент во низата. Повторувањето престанува откако
+    секој елемент од низата се процесирал. <br>
+
+
+</div>
+
+</div>
+<iframe width="890" height="500"
+        src="https://www.youtube.com/embed/2lRhXMJejw8?controls=0">
+</iframe>
+
+<div class="containerr">
+<div class="eden">
+    3. Range и For – Loops за броење <br>
+    Можеме да користиме for-јамки за да креираме јамки за броење исто како
+    што правевме со while-јамките. За да го сториме тоа, прво треба да научиме
+    за нов вид на низа наречена range. Опсегот е низа од цели броеви што
+    започнува со цел број a (почеток), завршува пред цел број b (стоп) и
+    разликата помеѓу секој елемент во низата, наречена големина на чекорот.
+    Опсегот се создава со вградената функција за опсег на Python. Функцијата
+    range бара два аргументи, почеток и стоп, и опционално може да прифати
+    трет аргумент за големината на чекорот кој, ако не е даден, стандардно е 1.
+    Можете исто така да дадете само еден аргумент за опсегот; опсегот (x) е
+    еквивалентен на опсегот (0, x, 1), и е низата 0,1,2,..., x−1. <br>
+    Генерална форма : range (start, stop, step_size)
+    Запомнете: стоп вредноста не е дел од низата. Опсезите може да се користат за
+    пишување for-loops за броење. <br>
+
+</div>
+
+    <div id="cetiri">
+
+    <div class="dva">
+        4. Избирање на правилен тип јамка <br>
+        Општо земено, for-јамките се она што сакате да го користите за итерирање
+        врз низа. И for-јамките и while-јамките се соодветни за едноставни јамки за
+        броење. Подобр е да се избере for-јамка со range за броење бидејќи бара
+        помалку код пишување во споредба со јамка while. За други јамки без
+        броење кои имаат комплицирани услови на јамка и/или не итерираат врз
+        секвенците, while-јамките се веројатно најдобриот избор.
+    </div>
+
+    <div class="tri"> 5. Бесконечни јамки
+        Бесконечните јамки се јамки кои се повторуваат засекогаш. While-јамка чија
+        состојба на јамка никогаш не може да стане False е бесконечна јамка. <br>
+        Да се напише бесконечен for – loop е прилично тешко затоа што секвенците имаат конечна
+        должина и се повторуваат само еднаш за секој елемент од секвенцата.
+
+    </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
