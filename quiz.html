@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="stil.css">
+    <title>Courses</title>
+
+
+    <script>
+        var timeLeft = 3600; // Time in seconds
+        var timer;
+        var score = 0;
+
+        function startTimer() {
+            timer = setInterval(function() {
+                timeLeft--;
+                document.getElementById("timer").textContent = "Time left: " + formatTime(timeLeft);
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    document.getElementById("timer").textContent = "Time's up!";
+                    calculateScore();
+                }
+            }, 1000);
+        }
+
+        function formatTime(seconds) {
+            var hours = Math.floor(seconds / 3600);
+            var minutes = Math.floor((seconds % 3600) / 60);
+            var seconds = seconds % 60;
+
+            return hours.toString().padStart(2, '0') + ':' +
+                minutes.toString().padStart(2, '0') + ':' +
+                seconds.toString().padStart(2, '0');
+        }
+
+        function calculateScore() {
+            var questions = document.forms[0].getElementsByTagName("input");
+            for (var i = 0; i < questions.length; i++) {
+                if (questions[i].checked) {
+                    if (questions[i].value === "T") {
+                        score += 1;
+                    }
+
+                    // Add more if statements for each question and answer
+                }
+            }
+            document.getElementById("score").textContent = "Your score: " + score;
+        }
+
+        function submitQuiz() {
+            clearInterval(timer);
+            calculateScore();
+        }
+    </script>
+
+
+    <style>
+
+      h1{
+          text-align: center;
+            color: white;
+          background: black;
+      }
+      #tekst{
+          text-align: center;
+            color: white;
+          background: black;
+      }
+      button{
+          margin-left: 700px;
+          margin-top: 20px;
+          width: 130px;
+          height: 60px;
+          color: white;
+          background: black;
+      }
+      form{
+          text-align: center;
+          margin-top: 50px;
+      }
+
+      .qw{
+          border: 1px solid black;
+          width: 500px;
+          height: 250px;
+          text-align: center;
+          margin-left: 500px;
+          background: black;
+          color: white;
+      }
+
+
+      #timer{
+          border: 1px solid black;
+          background-color: steelblue;
+          width: 170px;
+          height: 100px;
+          text-align: center;
+          padding: 28px;
+          position: fixed;
+          margin-top: -212px;
+          text-shadow: #4e555b;
+      }
+      #submit{
+          border: 1px solid black;
+          text-align: center;
+          background-color: lightcyan;
+          margin-bottom: 100px;
+          background-color: steelblue;
+      }
+
+      #score{
+          border: 1px solid black;
+          width: 200px;
+          height: 100px;
+          text-align: center;
+          background-color: steelblue;
+          margin-top: -80px;
+          margin-left: 663px;
+          padding-top: 33px;
+          margin-bottom: 80px;
+          color: black;
+      }
+
+      h3{
+          margin-top: 30px;
+      }
+
+    </style>
+
+
+</head>
+<body background="bg.jpg">
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">CodeGenius</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="course.html">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<h1> КВИЗ!</h1>
+
+<div id="tekst">Провери го своето знаење.
+<br>
+Квизот се состои од 50 кратки прашања кои треба да ги решите во времетраење од 1 час.
+    <br>
+    За да го започнете квизот кликнете СТАРТ!
+</div>
+
+    <button onclick="startTimer()">СТАРТ</button>
+
+<div id="timer"><strong>Time left: 1hour</strong></div>
+
+<form>
+
+    <div class="qw">
+    <h3>Прашање 1:</h3>
+    <p>Што може да содржи една променлива во името?</p>
+    <input type="radio" name="q1" value="T"> Букви, броеви, долна црта<br>
+    <input type="radio" name="q1" value="N"> Букви, броеви, извичник, прашалник<br>
+    <input type="radio" name="q1" value="N"> Букви и секакви спецјални знаци<br>
+    </div>
+
+    <div class="qw">
+    <h3>Прашање 2:</h3>
+    <p>Дали името на променливата може да содржи празен простор?</p>
+    <input type="radio" name="q2" value="N"> Да<br>
+    <input type="radio" name="q2" value="T"> Не<br>
+    </div>
+
+    <div class="qw">
+    <h3>Прашање 3:</h3>
+    <p>Дали името на променливата може да започни со долна црта?</p>
+    <input type="radio" name="q3" value="T"> Да<br>
+    <input type="radio" name="q3" value="N"> Не<br>
+    </div>
+
+    <div class="qw">
+    <h3>Прашање 4:</h3>
+    <p>Што значи 2**5 во Python?</p>
+    <input type="radio" name="q4" value="N"> 2 помножено со 5<br>
+    <input type="radio" name="q4" value="N"> Остаток на 2 поделено со 5<br>
+    <input type="radio" name="q4" value="T"> 2 на степен 5<br>
+    </div>
+
+    <div class="qw">
+    <h3>Прашање 5:</h3>
+    <p>Што значи 6//4 vo Python?</p>
+    <input type="radio" name="q5" value="T"> Целобројно делење<br>
+    <input type="radio" name="q5" value="N"> Делење<br>
+    <input type="radio" name="q5" value="N"> Остаток при делење<br>
+    </div>
+
+    <div class="qw">
+    <h3>Прашање 6:</h3>
+    <p>Кој збор се користи за внесување стринг од конзола?</p>
+    <input type="radio" name="q6" value="T"> Input()<br>
+    <input type="radio" name="q6" value="N"> Print()<br>
+    </div>
+
+    <div class="qw">
+    <h3>Прашање 7:</h3>
+    <p>Како се конвертира int при внес од конзола?</p>
+    <input type="radio" name="q7" value="N"> Y=float(input())<br>
+    <input type="radio" name="q7" value="T"> Y=int(input())<br>
+    <input type="radio" name="q7" value="N"> Y=str(input())<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 8:</h3>
+    <p>Како се нарекуваат аргументите на функцијата?</p>
+    <input type="radio" name="q8" value="T"> Влезови<br>
+    <input type="radio" name="q8" value="N"> Излези<br>
+    <input type="radio" name="q8" value="N"> Променливи<br>
+    </div>
+
+    <div class="qw">
+    <h3>Прашање 9:</h3>
+    <p>Со што се оддвоени аргументите во функцијата?</p>
+    <input type="radio" name="q9" value="T"> Точка<br>
+    <input type="radio" name="q9" value="N"> Запирка<br>
+    <input type="radio" name="q9" value="N"> Точка – запирка<br>
+    </div>
+
+    <div class="qw">
+
+    <h3>Прашање 10:</h3>
+    <p>. Колку аргументи прима функцијата за печатење?</p>
+    <input type="radio" name="q10" value="N"> 1<br>
+    <input type="radio" name="q10" value="T"> Безброј<br>
+    <input type="radio" name="q10" value="N"> 2<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 11:</h3>
+    <p>За што служифункцијата len()?</p>
+    <input type="radio" name="q11" value="N"> За пресметување <br>
+    <input type="radio" name="q11" value="T"> За броење карактери во низа<br>
+    <input type="radio" name="q11" value="N"> За проверка дали низата се состои од мали букви<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 12:</h3>
+    <p>. Колку аргументи прима len()?</p>
+    <input type="radio" name="q12" value="T"> 1<br>
+    <input type="radio" name="q12" value="N"> 0<br>
+    <input type="radio" name="q12" value="N"> 3<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 13:</h3>
+    <p>Дали може да се повика функција без влезови?</p>
+    <input type="radio" name="q13" value="T"> Да<br>
+    <input type="radio" name="q13" value="N"> Не<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 14:</h3>
+    <p>Што враќа функцијата type?</p>
+    <input type="radio" name="q14" value="N"> Каков тип на аргумент прима функцијата<br>
+    <input type="radio" name="q14" value="T"> Каков тип е аргументот напишан возаградите на функцијата<br>
+    <input type="radio" name="q14" value="N"> Аргументот со најголема вредност<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 15:</h3>
+    <p>За што се користи методот isdigit()?</p>
+    <input type="radio" name="q15" value="N"> Проверува дали објектот се состои од букви.
+    <br>
+    <input type="radio" name="q15" value="N"> Проверува дали објектот има спецјални знаци.<br>
+    <input type="radio" name="q15" value="T"> Проверува дали објектот се состои од броеви<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 16:</h3>
+    <p>Какосе повикува метод преку објект?</p>
+    <input type="radio" name="q16" value="T"> a.isdigit()<br>
+    <input type="radio" name="q16" value="N">  isdigit(a)
+    <br>
+    <input type="radio" name="q16" value="N"> a_isdigit()
+    <br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 17:</h3>
+    <p>Кој ги напишал модулите?</p>
+    <input type="radio" name="q17" value="N"> Тие кои го измислиле јазикот<br>
+    <input type="radio" name="q17" value="N"> Тие кои го направиле PyCharm<br>
+    <input type="radio" name="q17" value="T"> Некои луѓе кои ги напишале и сакаaт да ги споделат<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 18:</h3>
+    <p>За што се користи методот lower()?</p>
+    <input type="radio" name="q18" value="N"> Ја враќа помалата вредност<br>
+    <input type="radio" name="q18" value="T"> Проверува дали сите букви се мали.<br>
+    <input type="radio" name="q18" value="N"> Проверува дали има броеви.<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 19:</h3>
+    <p>Објектот е комбинација од:</p>
+    <input type="radio" name="q19" value="T"> Функции и податоци<br>
+    <input type="radio" name="q19" value="N"> Методи и податоци<br>
+    <input type="radio" name="q19" value="N"> Променливи и методи<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 20:</h3>
+    <p>Дали е може директно да се пристапи до податоците во објектот?</p>
+    <input type="radio" name="q20" value="N"> Да<br>
+    <input type="radio" name="q20" value="T"> Не<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 21:</h3>
+    <p>Што се модули?</p>
+    <input type="radio" name="q21" value="N"> Функции<br>
+    <input type="radio" name="q21" value="N"> Објекти<br>
+    <input type="radio" name="q21" value="T"> Датотеки<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 22:</h3>
+    <p>Како се нарекува целиот број со кој ја означуваме позицијата на елементите
+        во низата?</p>
+    <input type="radio" name="q22" value="N"> Set<br>
+    <input type="radio" name="q22" value="T"> . Offset
+    <br>
+    <input type="radio" name="q22" value="N"> Preset
+    <br>
+    </div>
+
+    <div class="qw">
+    <h3>Прашање 23:</h3>
+    <p>Што содржат модулите?</p>
+    <input type="radio" name="q23" value="T"> Дефиниции за функции и објекти<br>
+    <input type="radio" name="q23" value="N"> Дефиниции за варијабли<br>
+    <input type="radio" name="q23" value="N"> Датотеки<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 24:</h3>
+    <p>Дали морада разбереме како функционираат модулите за да ги користиме?</p>
+    <input type="radio" name="q24" value="T"> Да<br>
+    <input type="radio" name="q24" value="N"> Не<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 25:</h3>
+    <p>Со кој клучен збор и кажуваме на нашатапрограма да ги погледне датотеките на
+        модулите?
+    </p>
+    <input type="radio" name="q25" value="N"> Export<br>
+    <input type="radio" name="q25" value="T"> Import<br>
+    <input type="radio" name="q25" value="N"> Use
+    <br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 26:</h3>
+    <p>Во кој модул се дефиниранифункциите sin, cos , log10, sqrt…?</p>
+    <input type="radio" name="q26" value="T"> math<br>
+    <input type="radio" name="q26" value="N"> turtle<br>
+    <input type="radio" name="q26" value="N"> sys<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 27:</h3>
+    <p>Која е синтаксата за вметнување на модул во програма?</p>
+    <input type="radio" name="q27" value="N"> import x from y<br>
+    <input type="radio" name="q27" value="T"> import x as y<br>
+    <input type="radio" name="q27" value="N"> import x with y<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 28:</h3>
+    <p>На која позиција е првиот елемент од низата?</p>
+    <input type="radio" name="q28" value="N"> 1<br>
+    <input type="radio" name="q28" value="N"> -1<br>
+    <input type="radio" name="q28" value="T"> 0<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 29:</h3>
+    <p>На која позиција е последниот елемент од низата?</p>
+    <input type="radio" name="q29" value="N"> n+1<br>
+    <input type="radio" name="q29" value="T"> n-1<br>
+    <input type="radio" name="q29" value="N"> n<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 30:</h3>
+    <p>Какви загради се користат за да се пристапи до елемент од низата?</p>
+    <input type="radio" name="q30" value="T"> []<br>
+    <input type="radio" name="q30" value="N">()<br>
+    <input type="radio" name="q30" value="N"> {}<br>
+    </div>
+
+    <div class="qw">
+    <h3>Прашање 31:</h3>
+    <p>Доколку на местото за позиција напишеме -1 кој елемент ќе го пристапиме?</p>
+    <input type="radio" name="q31" value="N"> Првиот<br>
+    <input type="radio" name="q31" value="T"> Последниот<br>
+    <input type="radio" name="q31" value="N"> Вториот последен<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 32:</h3>
+    <p>Дали можеме да користиме невалиден offset за индексирање?</p>
+    <input type="radio" name="q32" value="N"> Да<br>
+    <input type="radio" name="q32" value="T">  Не<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 33:</h3>
+    <p>Што е резултат на сечењето?</p>
+    <input type="radio" name="q33" value="N"> Цел број<br>
+    <input type="radio" name="q33" value="T"> Нова низа
+    <br>
+    <input type="radio" name="q2" value="N"> Старата низ но изменета<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 34:</h3>
+    <p>Дали можеме да користиме невалиден offset за сечење?</p>
+    <input type="radio" name="q34" value="T">Да<br>
+    <input type="radio" name="q34" value="N"> Не<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 35:</h3>
+    <p>Дали релациските оператори имаат иста важност?</p>
+    <input type="radio" name="q35" value="T">Да<br>
+    <input type="radio" name="q35" value="N"> Не<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 36:</h3>
+    <p>Булов израз е:</p>
+    <input type="radio" name="q36" value="T"> секој израз чија вредност е или точно или неточно<br>
+    <input type="radio" name="q36" value="N"> секој израз чија вредност е точен и неточен<br>
+    <input type="radio" name="q36" value="N"> секој израз чија вредност е непроценлива<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 37:</h3>
+    <p>Операторот and (и) е true само кога операндите се:</p>
+    <input type="radio" name="q37" value="N"> True and False<br>
+    <input type="radio" name="q37" value="T">  True and True<br>
+    <input type="radio" name="q37" value="N"> False and False<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 38:</h3>
+    <p>Операторот or (или) е false само кога операндите се:</p>
+    <input type="radio" name="q38" value="N"> True and False<br>
+    <input type="radio" name="q38" value="N">  True and True<br>
+    <input type="radio" name="q38" value="T"> False and False<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 39:</h3>
+    <p>Колку операнди има операторот not?</p>
+    <input type="radio" name="q39" value="N"> 2<br>
+    <input type="radio" name="q39" value="T"> 1<br>
+    <input type="radio" name="q39" value="N"> 3<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 40:</h3>
+    <p>Операторот not (не) е true само кога х е :</p>
+    <input type="radio" name="q40" value="N"> True <br>
+    <input type="radio" name="q40" value="T"> False<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 41:</h3>
+    <p>Дали логичките оператори имаат иста важност?</p>
+    <input type="radio" name="q41" value="N"> Да<br>
+    <input type="radio" name="q41" value="T"> Не<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 42:</h3>
+    <p>Дали е забрането да се напише if услов без да следи else?</p>
+    <input type="radio" name="q42" value="N"> Да<br>
+    <input type="radio" name="q42" value="T"> Не<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 43:</h3>
+    <p>До кога се извршува while јамката?</p>
+    <input type="radio" name="q43" value="T"> Додека условот е true<br>
+    <input type="radio" name="q43" value="N"> Додека условот е false<br>
+    <input type="radio" name="q43" value="N"> Додека не се заврши пресметката<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 44:</h3>
+    <p>Што ќе се случи ако условот на јамката е false првиот пат кога ќе ја сретнеме?</p>
+    <input type="radio" name="q44" value="N"> Ќе се појави грешка<br>
+    <input type="radio" name="q44" value="T"> Ќе се прескокни јамката<br>
+    <input type="radio" name="q44" value="N"> Програмата ќе започни од почеток<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 45:</h3>
+    <p>Колку пати за секој знак се извршува блокот што ја следи for јамката?</p>
+    <input type="radio" name="q45" value="T"> Еднаш<br>
+    <input type="radio" name="q45" value="N"> Два пати<br>
+    <input type="radio" name="q45" value="N"> Не се извршува<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 46:</h3>
+    <p>Како се нарекува третиот аргумент во range ?</p>
+    <input type="radio" name="q46" value="N"> Големина на нога<br>
+    <input type="radio" name="q46" value="T"> Големина на чекор<br>
+    <input type="radio" name="q46" value="N"> Големина на збор<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 47:</h3>
+    <p>Која јамка е подобра за броење?</p>
+    <input type="radio" name="q47" value="T"> For -loop<br>
+    <input type="radio" name="q47" value="N"> While – loop<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 48:</h3>
+    <p>Кога не итерираме врз секвенците, а имаме покомплициран услов, која јамка
+        е подобра за користење?</p>
+    <input type="radio" name="q48" value="N"> For -loop<br>
+    <input type="radio" name="q48" value="T"> While – loop<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 49:</h3>
+    <p>Бесконечни јамки се појавуваат кога условот е секогаш:</p>
+    <input type="radio" name="q49" value="T"> True<br>
+    <input type="radio" name="q49" value="N"> False<br>
+    <input type="radio" name="q49" value="N"> True and False<br>
+    </div>
+    <div class="qw">
+    <h3>Прашање 50:</h3>
+    <p>Дали е лесно да се напише бесконечна for јамка?</p>
+    <input type="radio" name="q50" value="N"> Да<br>
+    <input type="radio" name="q50" value="F"> Не<br>
+    </div>
+    <!-- Add more questions as needed -->
+
+    <br>
+    <input id="submit" type="button" value="Submit Quiz" onclick="submitQuiz()">
+</form>
+
+<div id="score"></div>
+
+
+
+
+
+</body>
+</html>
