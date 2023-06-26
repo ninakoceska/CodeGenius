@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="mk">
 <head>
     <title>Home</title>
+    <meta charset=utf-8>
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="stil.css">
     <style>
@@ -14,111 +15,120 @@
             padding-top: 20px;
             display: block;
         }
+        .card{
+            height: 350px;
+        }
+        .row > div:nth-child(3) .soon{
+            margin-top: 23px;
+        }
+        .row > div:nth-child(4) .soon{
+            margin-top: 23px;
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="index.html">CodeGenius</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="course.html">Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="About.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="index.html">CodeGenius</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Дома</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="course.html">Курсеви</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="About.html">За Нас</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Contact.html">Контакт</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- Hero section -->
-    <div class="jumbotron">
-        <div class="container">
-            <h1>Добредојдовте во <b>CodeGenius</b></h1>
-            <p>Научете нови вештини и напредувајте во кариерата со нашите онлајн курсеви.</p>
-            <a class="btn btn-primary btn-lg" href="course.html" role="button">Започнете го вашето Python патување</a>
+<!-- Hero section -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>Добредојдовте во <b>CodeGenius</b></h1>
+        <p>Научете нови вештини и напредувајте во кариерата со нашите онлајн курсеви.</p>
+        <a class="btn btn-primary btn-lg" href="course.html" role="button">Започнете го вашето Python патување</a>
+    </div>
+</div>
+
+<!-- Course section -->
+<div class="container">
+    <h2 style="margin-bottom: 40px;">Популарни курсеви</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card course-card">
+                <img src="py.png" class="card-img-top sliki" alt="Course 1">
+                <div class="card-body">
+                    <h5 class="card-title">Python за почетници</h5>
+                    <p class="card-text">Ослободете го вашиот потенцијал за кодирање со Python! Научете ги основите, отклучете ја креативноста, и тргнете на патување со бескрајни можности. Придружете се на нашиот почетнички курс за Python денес!</p>
+                    <a href="course.html" class="btn btn-primary">Започнете сега!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card course-card">
+                <img src="c++.png" class="card-img-top c" alt="Course 2">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">Придружете се на нашиот курс за да истражувате во светот на програмирање со високи перформанси,
+                        ослободете ја вашата креативност и станете маестро за кодирање. Израмнете ги вашите вештини со C++</p>
+                    <a href="#" class="btn btn-primary soon">Достапно наскоро</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card course-card">
+                <img src="Java-Logo.png" class="card-img-top java" alt="Course 3">
+                <div class="card-body">
+                    <h5 class="card-title">Java advanced</h5>
+                    <p class="card-text">Јава! Научете го јазикот кој стои зад милиони
+                        уреди и освоете го светот на развој на софтвер. Запишете се на нашиот курс за Java и кодирајте го вашиот пат до успехот!</p>
+                    <a href="#" class="btn btn-primary soon">Достапно наскоро</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card course-card">
+                <img src="js.png" class="card-img-top js" alt="Course 4">
+                <div class="card-body">
+                    <h5 class="card-title">Master JavaScript!</h5>
+                    <p class="card-text">Вклучете се во возбудлива авантура за кодирање и искористете ја магијата на
+                        JavaScript додека ги отклучувате тајните за изработка на волшебни веб-страници кои танцуваат во ритамот на вашиот
+                        имагинација, низ нашиот извонреден и волшебен онлајн курс.</p>
+                    <a href="#" class="btn btn-primary soon">Достапно наскоро</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card course-card">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card course-card">
+                <img src="c.png" class="card-img-top c1" alt="Course 5">
+                <div class="card-body">
+                    <h5 class="card-title">Learn Basics</h5>
+                    <p class="card-text">Отклучете го светот на програмирањето C# со нашиот сеопфатен онлајн курс.
+                        Од основите до напредните концепти, овој курс ќе ве опреми со вештините потребни за да
+                        изгради робусни и скалабилни апликации. Придружете ни се денес и подигнете ја вашата експертиза за кодирање со C#.</p>
+                    <a href="#" class="btn btn-primary soon">Достапно наскоро</a>
+                </div>
+            </div>
         </div>
     </div>
-
-    <!-- Course section -->
-    <div class="container">
-        <h2>Популарни курсеви</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card course-card">
-                    <img src="py.png" class="card-img-top sliki" alt="Course 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Python за почетници</h5>
-                        <p class="card-text">Ослободете го вашиот потенцијал за кодирање со Python! Научете ги основите, отклучете ја креативноста, и тргнете на патување со бескрајни можности. Придружете се на нашиот почетнички курс за Python денес!</p>
-                        <a href="course.html" class="btn btn-primary">Започнете сега!</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card course-card">
-                    <img src="c++.png" class="card-img-top c" alt="Course 2">
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text">Придружете се на нашиот курс за да истражувате во светот на програмирање со високи перформанси,
-                       ослободете ја вашата креативност и станете маестро за кодирање. Израмнете ги вашите вештини со C++</p>
-                        <a href="#" class="btn btn-primary soon">Достапно наскоро</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card course-card">
-                    <img src="Java-Logo.png" class="card-img-top java" alt="Course 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Java advanced</h5>
-                        <p class="card-text">Јава! Научете го јазикот кој стои зад милиони
-                            уреди и освоете го светот на развој на софтвер. Запишете се на нашиот курс за Java и кодирајте го вашиот пат до успехот!</p>
-                        <a href="#" class="btn btn-primary soon">Достапно наскоро</a>
-                    </div>
-                </div>
-            </div> 
-            <div class="col-md-4">
-                <div class="card course-card">
-                    <img src="js.png" class="card-img-top js" alt="Course 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Master JavaScript!</h5>
-                        <p class="card-text">Вклучете се во возбудлива авантура за кодирање и искористете ја магијата на
-                            JavaScript додека ги отклучувате тајните за изработка на волшебни веб-страници кои танцуваат во ритамот на вашиот
-                            имагинација, низ нашиот извонреден и волшебен онлајн курс.</p>
-                        <a href="#" class="btn btn-primary soon">Достапно наскоро</a>
-                    </div>
-                </div>
-            </div> 
-            <div class="col-md-4">
-                <div class="card course-card">
-                </div>
-            </div> 
-            <div class="col-md-4">
-                <div class="card course-card">
-                    <img src="c.png" class="card-img-top c1" alt="Course 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Learn Basics</h5>
-                        <p class="card-text">Отклучете го светот на програмирањето C# со нашиот сеопфатен онлајн курс.
-                            Од основите до напредните концепти, овој курс ќе ве опреми со вештините потребни за да
-                            изгради робусни и скалабилни апликации. Придружете ни се денес и подигнете ја вашата експертиза за кодирање со C#.</p>
-                        <a href="#" class="btn btn-primary soon">Достапно наскоро</a>
-                    </div>
-                </div>
-            </div> 
-        </div>    
-    </div> 
-    <footer>
-        <div class="footer">
-            <p>&copy; 2023 CodeGenius. All rights reserved.</p>
-        </div>
-    </footer>
+</div>
+<footer>
+    <div class="footer">
+        <p>&copy; 2023 CodeGenius. All rights reserved.</p>
+    </div>
+</footer>
 </body>
