@@ -13,153 +13,207 @@
     <style>
         body{
             background-color: #4e555b;
+            animation: backgroundAnimation 10s infinite;
         }
 
-        .lekcija{
-            margin: 50px;
-            border: 1px solid dimgray;
-            background-color: darkgray;
+        @keyframes backgroundAnimation {
+            0% {
+                background-color: #4e555b;
+            }
+            50% {
+                background-color: #343a40;
+            }
+            100% {
+                background-color: #4e555b;
+            }
+        }
+
+        .lekcija,
+        .lekcija1 {
+            margin: 10px;
+            background-color: #343a40;
             color: white;
-            padding:5px;
+            padding: 15px;
             text-align: center;
-
+            transition: background-color 0.3s;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: bold;
+            animation: backgroundAnimation 10s infinite;
         }
-        #l1{
+
+        .lekcija:hover,
+        .lekcija1:hover {
+            background-color: #343a40;
+            color: white;
+            transform: scale(1.2);
+        }
+
+        #l1 {
             display: inline-block;
+            width: 350px;
+            height: 420px;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+            background-color: white;
+            border-radius: 10px;
+            margin-left: 115px;
             margin-top: 100px;
-            margin-left: 300px;
-            margin-right: 200px;
-
+            padding-top: 20px;
         }
-        #l2{
+
+        #l3 {
+            margin-top: -50px;
             display: inline-block;
-
-        }
-
-        .lekcija1{
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            background-color: white;
+            border-radius: 10px;
             margin: 50px;
-            border: 1px solid dimgray;
-            background-color: darkgray;
-            color: white;
-            padding:5px;
-            padding-left: 30px;
-            padding-right: 30px;
-            text-align: center;
+            height: 150px;
+            padding: 30px;
+            padding-top: 35px;
+        }
+
+        #l2 {
+            display: inline-block;
+            width: 350px;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            margin: 50px;
+            height: 420px;
+            padding-top: 20px;
 
         }
 
-        h1{
+        h1 {
             position: absolute;
             margin-left: 500px;
             margin-top: 40px;
         }
-        a{
+
+        a:hover {
             text-decoration: none;
             color: white;
         }
 
+        .pp {
+            color: white;
+        }
 
-
+        #l3 .lekcija1 {
+            margin: 0;
+        }
 
 
     </style>
-
-
 </head>
 <body>
-
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">CodeGenius</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="index.html">Дома</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="course.html">Courses</a>
+                <a class="nav-link" href="course.html">Курсеви</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="About.html">About</a>
+                <a class="nav-link" href="About.html">За Нас</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Contact.html">Contact</a>
+                <a class="nav-link" href="Contact.html">Контакт</a>
             </li>
         </ul>
     </div>
 </nav>
-<h1>Програмирање со Python</h1>
+<h1 class="pp">Програмирање со Python</h1>
 <div id="l1">
-<div class="lekcija"><a href="okolina.html">Лекција 1:
-<br>
-Околина
-</a>
-</div>
+    <a href="okolina.html">
+        <div class="lekcija">
+            Лекција 1:
+            <br>
+            Околина
+        </div>
+    </a>
 
-<div class="lekcija"><a href="variables.html">Лекција 2:
-    <br>
-    Податочни типови во Python
-</a>
-</div>
+    <a href="variables.html">
+        <div class="lekcija">
+            Лекција 2:
+            <br>
+            Податочни типови во Python
+        </div>
+    </a>
 
-<div class="lekcija"><a href="objekti.html">Лекција 3:
-    <br>
-   Објекти
+    <a href="objekti.html">
+        <div class="lekcija">
+            Лекција 3:
+            <br>
+            Објекти
+        </div>
+    </a>
+
+    <a href="moduli.html">
+        <div class="lekcija">
+            Лекција 4:
+            <br>
+            Модули
+        </div>
     </a>
 </div>
 
-<div class="lekcija"><a href="moduli.html"> Лекција 4:
-    <br>
-   Модули
-</a>
-</div>
-    <div class="lekcija1"><a href="funkcii.html"> Лекција 5:
-        <br>
-        Функции
+<div id="l3" style="margin-top: -100px;">
+    <a id="kviz" href="quiz.html">
+        <div class="lekcija1">
+            Провери го знаењето:
+            <br>
+            КВИЗ!
+        </div>
     </a>
-    </div>
-    </div>
+</div>
 
 <div id="l2">
-
-
-<div class="lekcija1"><a href="relaciskio.html">Лекција 6:
-    <br>
-    Релациски оператори
-</a>
-</div>
-
-<div class="lekcija1"><a href="logickio.html">Лекција 7:
-    <br>
-    Логички оператори
-</a>
-</div>
-
-    <div class="lekcija1"><a href="ifelse.html"> Лекција 8:
-        <br>
-        if / else функции
+    <a href="funkcii.html">
+        <div class="lekcija1">
+            Лекција 5:
+            <br>
+            Функции
+        </div>
     </a>
-    </div>
 
-
-    <div class="lekcija1"><a href="ciklusi.html">Лекција 9:
-        <br>
-        Циклуси
+    <a href="ciklusi.html">
+        <div class="lekcija1">
+            Лекција 6:
+            <br>
+            Циклуси
+        </div>
     </a>
-    </div>
 
-    <div class="lekcija1"><a href="quiz.html">
-        Провери го знаењето:
-        <br>
-        КВИЗ!
-
+    <a href="relaciskio.html">
+        <div class="lekcija1">
+            Лекција 7:
+            <br>
+            Релациски оператори
+        </div>
     </a>
-    </div>
 
+    <a href="logickio.html">
+        <div class="lekcija1">
+            Лекција 8:
+            <br>
+            Логички оператори
+        </div>
+    </a>
 </div>
-
 </body>
 </html>
